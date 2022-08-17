@@ -52,11 +52,8 @@ class DMControlEnvWithPhysics():
         return state, step.reward, False, {}
     
     def get_physics(self):
-        data = {}
+        physics = {}
         for attr_name in self.attrs:
             attr = copy.copy(getattr(self.env.physics.data, attr_name))
-            data[attr_name] = attr
-        return data
-
-        
-      
+            physics[attr_name] = attr
+        return physics
