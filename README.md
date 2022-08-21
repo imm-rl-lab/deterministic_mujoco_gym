@@ -9,4 +9,6 @@ In this repository, we are trying different ways to make reinforcement learning 
 We implemented a wrapper for the environments that aims to fulfill these points, but unfortunately, it works not for all environments yet. 
 The main reason is that Mujoco has internal variables and structures to which there is no obvious access. For example, in many environments, <code>next_state</code> and <code>reward</code> depend not only on the current <code>states</code>, but also on "internal physics". Nonetheless, we strive to take such things into account. Our results are described in the table below.
 
-???
+*TODO: Table*
+
+*TODO: installation*
