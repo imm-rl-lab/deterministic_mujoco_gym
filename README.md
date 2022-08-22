@@ -84,8 +84,8 @@ Microsoft Visual C++ 14.0 or greater.
 https://visualstudio.microsoft.com/visual-cpp-build-tools/
 
 #### Installation order
-1. Download binaries: https://www.roboti.us/download/mjpro150_win64.zip
-and activation key: https://www.roboti.us/file/mjkey.txt.
+1. Download binaries: http://www.roboti.us/download.html/mjpro150_win64.zip
+and activation key: http://www.roboti.us/license.html
 
 2. Create directory ```%userprofile%/.mujoco/```.
 3. Unzip the binaries and move the key to the created
@@ -107,7 +107,7 @@ os.add_dll_directory(os.path.join(os.path.expanduser('~'), ".mujoco", "mjpro150"
 from mujoco_py import GlfwContext
 GlfwContext(True)
 ```
-2. Loading environments is done via [gym](https://gym.openai.com/)
+2. Loading environments is done via [gym](https://www.gymlibrary.ml/environments/mujoco/#)
 ```python
 import gym
 env = gym.make("Ant-v3")
