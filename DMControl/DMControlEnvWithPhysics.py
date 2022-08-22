@@ -40,7 +40,7 @@ class DMControlEnvWithPhysics():
         step = self.env.step(action)
         state = NPArrayWithPhysics(self.env.physics.state(), physics=self.get_physics())
         self.state = state
-        return state, step.reward, False, {}
+        return state, step.reward, step.last(), {}
     
     def virtual_step(self, state, action):
         self.env.physics.set_state(state)
@@ -49,7 +49,7 @@ class DMControlEnvWithPhysics():
                 
         step = self.env.step(action)
         state = NPArrayWithPhysics(self.env.physics.state(), physics=self.get_physics())
-        return state, step.reward, False, {}
+        return state, step.reward, step.last(), {}
     
     def get_physics(self):
         physics = {}

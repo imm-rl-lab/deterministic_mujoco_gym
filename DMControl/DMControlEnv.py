@@ -20,11 +20,11 @@ class DMControlEnv():
     def step(self, action):
         step = self.env.step(action)
         self.state = self.env.physics.state()
-        return self.state, step.reward, False, {}
+        return self.state, step.reward, step.last(), {}
     
     def virtual_step(self, state, action):
         self.env.physics.set_state(state)
         step = self.env.step(action)
         state = self.env.physics.state()
-        return state, step.reward, False, {}
+        return state, step.reward, step.last(), {}
       
