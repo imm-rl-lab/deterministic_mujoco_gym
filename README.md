@@ -72,4 +72,74 @@ GymEnv('Reacher-v2')                                  |    $10^{0}$   |    $10^{
 GymEnv('Swimmer-v3')                                  |       0       |       0      |       $10^{-16}$
 GymEnv('Walker2d-v3')                                 |       0       |       0      |       $10^{-14}$
 
-*TODO: installation*
+# mujoco-py for gym
+
+## Installation for Windows
+Support for Windows has been dropped in newer versions of mujoco-py. 
+The latest working version is 1.50.1.68.
+But even here you can’t do without dancing with a tambourine.
+
+#### Requirements
+Microsoft Visual C++ 14.0 or greater.
+https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+#### Installation order
+1. Download binaries: http://www.roboti.us/download.html/mjpro150_win64.zip
+and activation key: http://www.roboti.us/license.html
+
+2. Create directory ```%userprofile%/.mujoco/```.
+3. Unzip the binaries and move the key to the created
+    directory.
+4. Add full path to directory 
+   ```%userprofile%/.mujoco/mjpro150/bin``` into a variable 
+   environments PATH.
+5. Download mujoco-py versions 1.50.1.68:
+https://files.pythonhosted.org/packages/cf/8c/64e0630b3d450244feef0688d90eab2448631e40ba6bdbd90a70b84898e7/mujoco-py-1.50.1.68.tar.gz
+6. Unzip the downloaded archive to an arbitrary directory,
+    navigate to this directory in the terminal and install
+    mujoco-py using command: ```python setup.py install```
+   
+#### Usage
+1. Before each use, you must execute the commands
+```python
+import os
+os.add_dll_directory(os.path.join(os.path.expanduser('~'), ".mujoco", "mjpro150", "bin"))
+from mujoco_py import GlfwContext
+GlfwContext(True)
+```
+2. Loading environments is done via [gym](https://www.gymlibrary.ml/environments/mujoco/#)
+```python
+import gym
+env = gym.make("Ant-v3")
+```
+3. Further use of environments - habitual.
+
+#### Checking work
+```python
+import gym
+import matplotlib.pyplot as plt
+
+env = gym.make("Ant-v3")
+state = env.reset()
+pixels = env.render("rgb_array")
+plt.imshow(pixels)
+```
+
+#### List of default mujoco-py environments:
+- Ant-v3
+- HalfCheetah-v3
+- Hopper-v3
+- Humanoid-v3
+- HumanoidStandup-v2
+- InvertedDoublePendulum-v2
+- InvertedPendulum-v2
+- Pusher-v2
+- Reacher-v2
+- Swimmer-v3
+- Walker2d-v3
+
+## Installation for Linux, OSX
+
+Follow instructions
+
+https://github.com/openai/mujoco-py/blob/master/README.md
