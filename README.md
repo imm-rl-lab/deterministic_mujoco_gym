@@ -13,64 +13,68 @@ Environments                                          |    reset()    |    step(
 ----------------------------------------------------- | ------------- | ------------ | ----------------
 DMControlEnv('acrobot', 'swingup')                    |       0       |       0      |        0
 DMControlEnv('acrobot', 'swingup_sparse')             |       0       |       0      |        0
-DMControlEnv('ball_in_cup', 'catch')                  |       0       |       0      |      $10^{-3}$
+DMControlEnv('ball_in_cup', 'catch')                  |       0       |   $10^{-2}$  |       $10^{-2}$
 DMControlEnvWithPhysics('ball_in_cup', 'catch')       |       0       |       0      |        0
-DMControlEnv('cartpole', 'balance')                   |       0       |       0      |        0
-DMControlEnv('cartpole', 'balance_sparse')            |       0       |       0      |        0
-DMControlEnv('cartpole', 'swingup')                   |       0       |       0      |        0
-DMControlEnv('cartpole', 'swingup_sparse')            |       0       |       0      |        0
-DMControlEnv('cheetah', 'run')                        |       0       |       0      |       $10^{-2}$
+DMControlEnv('cartpole', 'balance')                   |       0       |   $10^{-14}$ |       $10^{-14}$
+DMControlEnvWithPhysics('cartpole', 'balance')        |       0       |       0      |        0
+DMControlEnv('cartpole', 'balance_sparse')            |       0       |   $10^{-14}$ |       $10^{-14}$
+DMControlEnvWithPhysics('cartpole', 'balance_sparse') |       0       |       0      |        0
+DMControlEnv('cartpole', 'swingup')                   |       0       |   $10^{-14}$ |       $10^{-14}$
+DMControlEnvWithPhysics('cartpole', 'swingup')        |       0       |       0      |        0
+DMControlEnv('cartpole', 'swingup_sparse')            |       0       |   $10^{-14}$ |       $10^{-14}$
+DMControlEnvWithPhysics('cartpole', 'swingup_sparse') |       0       |       0      |        0
+DMControlEnv('cheetah', 'run')                        |       0       |   $10^{2}$   |       $10^{1}$
 DMControlEnvWithPhysics('cheetah', 'run')             |       0       |       0      |        0
-DMControlEnv('finger', 'spin')                        |       0       |       0      |       $10^{-15}$
+DMControlEnv('finger', 'spin')                        |       0       |   $10^{1}$   |       $10^{0}$
 DMControlEnvWithPhysics('finger', 'spin')             |       0       |       0      |        0
-DMControlEnv('finger', 'turn_easy')                   |       0       |       0      |       $10^{-15}$
+DMControlEnv('finger', 'turn_easy')                   |       0       |   $10^{1}$   |       $10^{0}$
 DMControlEnvWithPhysics('finger', 'turn_easy')        |       0       |       0      |        0
-DMControlEnv('finger', 'turn_hard')                   |       0       |       0      |       $10^{-15}$
+DMControlEnv('finger', 'turn_hard')                   |       0       |   $10^{1}$   |       $10^{0}$
 DMControlEnvWithPhysics('finger', 'turn_hard')        |       0       |       0      |        0
-DMControlEnv('fish', 'upright')                       |       0       |       0      |       $10^{-5}$
+DMControlEnv('fish', 'upright')                       |       0       |   $10^{0}$   |       $10^{0}$
 DMControlEnvWithPhysics('fish', 'upright')            |       0       |       0      |        0
-DMControlEnv('fish', 'swim')                          |   $10^{-5}$   |   $10^{-5}$  |       $10^{-5}$
-DDMControlEnvWithPhysics('fish', 'swim')              |   $10^{-5}$   |   $10^{-5}$  |       $10^{-5}$
-DMControlEnv('hopper', 'stand')                       |       0       |       0      |       $10^{-9}$
+DMControlEnv('fish', 'swim')                          |   $10^{-3}$   |   $10^{0}$   |       $10^{0}$
+DDMControlEnvWithPhysics('fish', 'swim')              |   $10^{-4}$   |   $10^{0}$   |       $10^{-0}$
+DMControlEnv('hopper', 'stand')                       |       0       |   $10^{0}$   |       $10^{-1}$
 DMControlEnvWithPhysics('hopper', 'stand')            |       0       |       0      |        0
-DMControlEnv('hopper', 'hop')                         |       0       |       0      |       $10^{-9}$
+DMControlEnv('hopper', 'hop')                         |       0       |   $10^{0}$   |       $10^{-1}$
 DMControlEnvWithPhysics('hopper', 'hop')              |       0       |       0      |        0
-DMControlEnv('humanoid', 'stand')                     |       0       |       0      |       $10^{-2}$
+DMControlEnv('humanoid', 'stand')                     |       0       |   $10^{1}$   |       $10^{0}$
 DMControlEnvWithPhysics('humanoid', 'stand')          |       0       |       0      |        0
-DMControlEnv('humanoid', 'walk')                      |       0       |       0      |       $10^{-2}$
+DMControlEnv('humanoid', 'walk')                      |       0       |   $10^{1}$   |       $10^{0}$
 DMControlEnvWithPhysics('humanoid', 'walk')           |       0       |       0      |        0
-DMControlEnv('humanoid', 'run')                       |       0       |       0      |       $10^{-2}$
+DMControlEnv('humanoid', 'run')                       |       0       |   $10^{1}$   |       $10^{0}$
 DMControlEnvWithPhysics('humanoid', 'run')            |       0       |       0      |        0
-DMControlEnv('manipulator', 'bring_ball')             |   $10^{-59}$  |   $10^{-29}$ |       $10^{-1}$
+DMControlEnv('manipulator', 'bring_ball')             |   $10^{-58}$  |   $10^{0}$   |       $10^{0}$
 DMControlEnvWithPhysics('manipulator', 'bring_ball')  |   $10^{-59}$  |   $10^{-29}$ |       $10^{-29}$
-DMControlEnv('pendulum', 'swingup')                   |       0       |       0      |       $10^{0}$
+DMControlEnv('pendulum', 'swingup')                   |       0       |   $10^{2}$   |       $10^{2}$
 DMControlEnvWithPhysics('pendulum', 'swingup')        |       0       |       0      |        0
-DMControlEnv('point_mass', 'easy')                    |       0       |       0      |       $10^{-1}$
+DMControlEnv('point_mass', 'easy')                    |       0       |   $10^{1}$   |       $10^{1}$
 DMControlEnvWithPhysics('point_mass', 'easy')         |       0       |       0      |        0
-DMControlEnv('reacher', 'easy')                       |    $10^{0}$   |       0      |       $10^{-10}$
-DMControlEnvWithPhysics('reacher', 'easy')            |    $10^{0}$   |       0      |        0
-DMControlEnv('reacher', 'hard')                       |       0       |       0      |       $10^{-10}$
-DMControlEnvWithPhysics('reacher', 'hard')            |       0       |       0      |        0
-DMControlEnv('swimmer', 'swimmer6')                   |    $10^{-2}$  |   $10^{-3}$  |       $10^{-3}$
-DMControlEnvWithPhysics('swimmer', 'swimmer6')        |    $10^{-2}$  |   $10^{-3}$  |       $10^{-3}$
-MControlEnv('swimmer', 'swimmer15')                   |    $10^{-3}$  |   $10^{-3}$  |       $10^{-3}$
-DMControlEnvWithPhysics('swimmer', 'swimmer15')       |    $10^{-3}$  |   $10^{-3}$  |       $10^{-3}$
-DMControlEnv('walker', 'stand')                       |       0       |       0      |       $10^{-15}$
+DMControlEnv('reacher', 'easy')                       |    $10^{0}$   |   $10^{3}$   |       $10^{3}$
+DMControlEnvWithPhysics('reacher', 'easy')            |    $10^{0}$   |   $10^{0}$   |       $10^{0}$
+DMControlEnv('reacher', 'hard')                       |       0       |   $10^{3}$   |       $10^{3}$
+DMControlEnvWithPhysics('reacher', 'hard')            |       0       |   $10^{0}$   |       $10^{0}$
+DMControlEnv('swimmer', 'swimmer6')                   |    $10^{-1}$  |   $10^{1}$   |       $10^{1}$
+DMControlEnvWithPhysics('swimmer', 'swimmer6')        |    $10^{-1}$  |   $10^{0}$   |       $10^{0}$
+MControlEnv('swimmer', 'swimmer15')                   |    $10^{0}$   |   $10^{1}$   |       $10^{1}$
+DMControlEnvWithPhysics('swimmer', 'swimmer15')       |    $10^{-1}$  |   $10^{0}$   |       $10^{0}$
+DMControlEnv('walker', 'stand')                       |       0       |   $10^{-1}$  |       $10^{-1}$
 DMControlEnvWithPhysics('walker', 'stand')            |       0       |       0      |        0
-DMControlEnv('walker', 'walk')                        |       0       |       0      |       $10^{-15}$
+DMControlEnv('walker', 'walk')                        |       0       |   $10^{-1}$  |       $10^{-1}$
 DMControlEnvWithPhysics('walker', 'walk')             |       0       |       0      |        0
-DMControlEnv('walker', 'run')                         |       0       |       0      |       $10^{-15}$
+DMControlEnv('walker', 'run')                         |       0       |   $10^{-1}$  |       $10^{-1}$
 DMControlEnvWithPhysics('walker', 'run')              |       0       |       0      |        0
-GymEnv('Ant-v3')                                      |       0       |       0      |       $10^{-14}$
-GymEnv('HalfCheetah-v3')                              |       0       |       0      |       $10^{-14}$
-GymEnv('Hopper-v3')                                   |       0       |       0      |       $10^{-16}$
-GymEnv('Humanoid-v3')                                 |       0       |       0      |       $10^{1}$
-GymEnv('HumanoidStandup-v2')                          |    $10^{2}$   |    $10^{3}$  |       $10^{-4}$
+GymEnv('Ant-v3')                                      |       0       |   $10^{0}$   |       $10^{0}$
+GymEnv('HalfCheetah-v3')                              |       0       |   $10^{-13}$ |       $10^{-14}$
+GymEnv('Hopper-v3')                                   |       0       |   $10^{-16}$ |       $10^{-16}$
+GymEnv('Humanoid-v3')                                 |       0       |   $10^{1}$   |       $10^{1}$
+GymEnv('HumanoidStandup-v2')                          |    $10^{2}$   |   $10^{2}$   |       $10^{-2}$
 GymEnv('InvertedDoublePendulum-v2')                   |       0       |       0      |        0
 GymEnv('InvertedPendulum-v2')                         |       0       |       0      |        0
 GymEnv('Reacher-v2')                                  |    $10^{0}$   |    $10^{-1}$ |       $10^{-1}$
-GymEnv('Swimmer-v3')                                  |       0       |       0      |       $10^{-16}$
-GymEnv('Walker2d-v3')                                 |       0       |       0      |       $10^{-14}$
+GymEnv('Swimmer-v3')                                  |       0       |    $10^{-15}$|       $10^{-17}$
+GymEnv('Walker2d-v3')                                 |       0       |    $10^{-14}$|       $10^{-15}$
 
 # mujoco-py for gym
 
