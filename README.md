@@ -1,4 +1,4 @@
-# Mujoco Gym
+# Deterministic Mujoco Gym
 
 In this repository, we are trying different ways to make reinforcement learning environments from [Mujoco Gym](https://www.gymlibrary.ml/environments/mujoco/) and [dm_control](https://github.com/deepmind/dm_control) deterministic. We strive to ensure that the environments have the following important properties:
 
