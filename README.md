@@ -9,6 +9,8 @@ In this repository, we are trying different ways to make reinforcement learning 
 We implemented a wrapper for the environments that aims to fulfill these points, but unfortunately, it works not for all environments yet. 
 The main reason is that Mujoco has internal variables and structures to which there is no obvious access. For example, in many environments, <code>next_state</code> and <code>reward</code> depend not only on the current <code>states</code>, but also on "internal physics". Nonetheless, we strive to take such things into account. Our results are described in the table below.
 
+### DM_CONTROL
+
 Environments                                          |    reset()    |    step()    |   virtual_step()    	
 ----------------------------------------------------- | ------------- | ------------ | ----------------
 DMControlEnv('acrobot', 'swingup')                    |       0       |       0      |        0
@@ -65,6 +67,13 @@ DMControlEnv('walker', 'walk')                        |       0       |   $10^{-
 DMControlEnvWithPhysics('walker', 'walk')             |       0       |       0      |        0
 DMControlEnv('walker', 'run')                         |       0       |   $10^{-1}$  |       $10^{-1}$
 DMControlEnvWithPhysics('walker', 'run')              |       0       |       0      |        0
+
+Here <code>DMControlEnv(domain_name, task_name)</code> is a simple wrapper to use usuall gym interface;  <code>DMControlEnvWithPhysics(domain_name, task_name)</code> is a special wrapper which implicitly saves "internal physics" of environments as an additional attribute of the numpy array <code>state</code>.
+
+### GYM
+
+Environments                                          |    reset()    |    step()    |   virtual_step()    	
+----------------------------------------------------- | ------------- | ------------ | ----------------
 GymEnv('Ant-v3')                                      |       0       |   $10^{0}$   |       $10^{0}$
 GymEnv('HalfCheetah-v3')                              |       0       |   $10^{-13}$ |       $10^{-14}$
 GymEnv('Hopper-v3')                                   |       0       |   $10^{-16}$ |       $10^{-16}$
@@ -76,9 +85,10 @@ GymEnv('Reacher-v2')                                  |    $10^{0}$   |    $10^{
 GymEnv('Swimmer-v3')                                  |       0       |    $10^{-15}$|       $10^{-17}$
 GymEnv('Walker2d-v3')                                 |       0       |    $10^{-14}$|       $10^{-15}$
 
-# mujoco-py for gym
+Here <code>GymEnv(domain_name, task_name)</code> is a special wrapper which implicitly saves MjSimState object as an additional attribute of the numpy array <code>state</code>.
 
-## Installation for Windows
+
+## Installation mujoco-py for Windows
 Support for Windows has been dropped in newer versions of mujoco-py. 
 The latest working version is 1.50.1.68.
 But even here you can’t do without dancing with a tambourine.
@@ -129,21 +139,8 @@ pixels = env.render("rgb_array")
 plt.imshow(pixels)
 ```
 
-#### List of default mujoco-py environments:
-- Ant-v3
-- HalfCheetah-v3
-- Hopper-v3
-- Humanoid-v3
-- HumanoidStandup-v2
-- InvertedDoublePendulum-v2
-- InvertedPendulum-v2
-- Pusher-v2
-- Reacher-v2
-- Swimmer-v3
-- Walker2d-v3
+## Installation mujoco-py for Linux, OSX
 
-## Installation for Linux, OSX
-
-Follow instructions
+Follow the instructions
 
 https://github.com/openai/mujoco-py/blob/master/README.md
